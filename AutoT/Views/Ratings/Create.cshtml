@@ -1,0 +1,53 @@
+﻿@model AutoT.Models.Rating
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Rating</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="very_low" class="control-label"></label>
+                <input asp-for="very_low" class="form-control" />
+                <span asp-validation-for="very_low" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="low" class="control-label"></label>
+                <input asp-for="low" class="form-control" />
+                <span asp-validation-for="low" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="medium" class="control-label"></label>
+                <input asp-for="medium" class="form-control" />
+                <span asp-validation-for="medium" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="high" class="control-label"></label>
+                <input asp-for="high" class="form-control" />
+                <span asp-validation-for="high" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="very_high" class="control-label"></label>
+                <input asp-for="very_high" class="form-control" />
+                <span asp-validation-for="very_high" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
